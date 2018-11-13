@@ -13,6 +13,10 @@ p:nth-of-type(6n) {
 	font-weight: bold;
 }
 
+p:nth-of-type(4n) {
+	border: 5px pink;
+
+}
 button {
 	background-color: violet;
 	box-shadow: 3px 3px 2px blue;
