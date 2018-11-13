@@ -39,6 +39,23 @@ fetch('https://jsonplaceholder.typicode.com/todos/5')
 	.then(function(myJson) {
 		let toDoTitle = (myJson['title']);
 		let titlePara = document.createElement('p');
-		titlePara.innerHTML = "<h1>The following is text from a fetch request: </h1>" + toDoTitle;
+		titlePara.innerHTML = titlePara.innerHTML + "<h1>The following is text from a fetch request: </h1>" + toDoTitle;
 		document.body.appendChild(titlePara);
 	});
+
+
+//xmlhttp request
+
+var xmlhttp = new XMLHttpRequest();
+var url = "https://jsonplaceholder.typicode.com/todos/20";
+
+xmlhttp.onreadystatechange = function() {
+	if(this.readyState == 4 && this.status == 200) {
+		var json = this.responseText;
+		titleBody = JSON.parse(json);
+
+		document.getElementById("http").innerText = titleBody.title;
+	}
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
