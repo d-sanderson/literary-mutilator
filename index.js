@@ -38,7 +38,7 @@ fetch('https://jsonplaceholder.typicode.com/todos/5')
 	})
 	.then(function(myJson) {
 		let toDoTitle = (myJson['title']);
-		let titlePara = document.createElement('h1');
-		titlePara.innerHTML = "The following is text from a fetch request " + toDoTitle;
+		let titlePara = document.createElement('p');
+		titlePara.innerHTML = "<h1>The following is text from a fetch request: </h1>" + toDoTitle;
 		document.body.appendChild(titlePara);
 	});
