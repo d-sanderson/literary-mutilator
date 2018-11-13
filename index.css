@@ -1,0 +1,19 @@
+
+.catpan {
+	margin-top: -.5%;
+	width: 100%;
+	height: 70px;
+	padding: 10px;
+	border: 1px solid #aaaaaa;
+
+}
+
+p:nth-of-type(6n) {
+	margin-top: 5%;
+	font-weight: bold;
+}
+
+button {
+	background-color: violet;
+	box-shadow: 3px 3px 2px blue;
+}
