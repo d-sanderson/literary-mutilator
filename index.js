@@ -59,3 +59,25 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
+
+
+
+//anagram maker
+
+function anaGram(){
+
+	let para3 = document.getElementById('three').innerHTML;
+	var arrayOfWords = para3.split(' ');
+
+
+	for (var i = 0; i < arrayOfWords.length; i++) {
+		arrayOfWords[i] = arrayOfWords[i].split('');
+		arrayOfWords[i] = arrayOfWords[i].sort();
+		arrayOfWords[i] = arrayOfWords[i].join('');
+	}
+
+	let anagramOfWords = arrayOfWords.join(" ");
+
+	document.getElementById('three').innerHTML = anagramOfWords;
+
+}
